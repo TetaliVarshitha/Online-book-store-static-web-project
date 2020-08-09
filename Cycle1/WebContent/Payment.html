@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>payment</title></head>
+<link rel="stylesheet" href="Payment.css">
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="topnav">
+  <a class="active" href="BookStoreHomePage.html">&#127968;&nbsp;HOME</a>
+  <a href="Register.html">REGISTRATION</a>
+  <a href="login.html">LOGIN</a>
+  <a href="UserProfile.html">USER PROFILE</a>
+  <a href="Catalog.html">BOOKS CATALOG</a>
+  <a href="ShoppingCart.html">SHOPPING CART</a>
+  <a href="Payment.html">PAYMENT</a>
+  <a href="OrderConfirmation.html">ORDER CONFIRMATION</a>
+</div>
+<h2 align="center">BOOKLAND</h2>
+<div class="row">
+      <form action="OrderConfirmation.html" method="post">
+            <h3>&emsp;Payment</h3>
+            <label for="fname">&emsp;Accepted Cards<br><h5><b>&emsp;&nbsp;Visa&emsp;Master Card&emsp;ICICI</b></h5></label>
+              <img src="https://www.paymentsjournal.com/wp-content/uploads/2018/06/bank-3487033_1920.png" style="width: 100px;">
+            
+            <label for="cname">&emsp;Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
+            <label for="ccnum">&emsp;Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+            <label for="expmonth">&emsp;Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">&emsp;Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2020" required>
+              </div>
+              <div class="col-50">
+                <label for="cvv">&emsp;CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352" required>
+              </div>
+              <div class="col-50">
+                <label for="total">&emsp;Total Amount</label>
+                <input type="text" id="total" name="total" placeholder="&#8377;" required>
+              </div>
+            </div>
+            <div class="col-50">
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button style="align: center;font-size: 14px; padding-left:20px; padding-right: 20px;" type="submit" value=OK>Submit</button>
+            </div>
+      </form>
+   </div>
+</body>
+</html>
