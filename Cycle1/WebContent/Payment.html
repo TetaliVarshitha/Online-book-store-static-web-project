@@ -5,6 +5,97 @@
 <link rel="stylesheet" href="Payment.css">
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript">
+    function validateForm() {
+    	var name = document.getElementById("name").value;
+    	var pattern =  /^[a-zA-Z][a-zA-Z ]*$/;
+    	var number = document.getElementById("number").value;
+    	var month = document.getElementById("month").value;
+    	var year = document.getElementById("year").value;
+    	var cvv = document.getElementById("cvv").value;
+    	var total = document.getElementById("total").value;
+    	var numbers = /^[0-9]+$/;
+    	
+    	if(name == "") {
+        	alert("Please enter your name!");
+        	return false;
+        }
+    	if(name.length<7 || name.length>25 || !isNaN(name) || !(name.match(pattern))){
+        	alert("Please enter valid name!");
+        	return false;
+        }
+   
+    	if(number=="") {
+             alert("Please enter your card-number!");
+             return false;
+        }
+        if(!(number.length==12)) {
+          	alert("Please enter 12 digits correctly!");
+          	return false;
+        }
+        if(!(number.match(numbers))) {
+          	alert("Card number should not be letters and characters!");
+          	return false;
+        }
+        
+        if(month == "") {
+        	alert("Please enter expiry month!");
+        	return false;
+        } 
+        
+        if(!(month=="January"||month=="February"||month=="March"||month=="April"||month=="May"||month=="June"||month=="July"||month=="August"||month=="September"||month=="October"||month=="November"||month=="December"||month=="january"||month=="february"||month=="march"||month=="april"||month=="may"||month=="june"||month=="july"||month=="august"||month=="september"||month=="october"||month=="november"||month=="december")){
+        	alert("Please enter valid expiry month!");
+        	return false;
+        } 
+        
+        if(year == "") {
+        	alert("Please enter expiry year!");
+        	return false;
+        }
+        if(!(year.match(numbers))) {
+          	alert("Year should not be letters and characters!");
+          	return false;
+        }
+        if(year < 2020 || year > 2025){
+        	alert("Please enter valid expiry year!");
+        	return false;
+        }
+   
+        if(cvv == "") {
+        	alert("Please enter cvv!");
+        	return false;
+        }
+        if(!(cvv.match(numbers))) {
+          	alert("CVV should not be letters and characters!");
+          	return false;
+        }
+        if(!(cvv.length==3)){
+        	alert("Please enter valid cvv!");
+        	return false;
+        }
+
+        if(total == "") {
+        	alert("Please enter total!");
+        	return false;
+        }
+        if(!(total.match(numbers))) {
+          	alert("Total should not be letters and characters!");
+          	return false;
+        }
+        if(total < 500 || total > 5000){
+        	alert("Please enter valid total!");
+        	return false;
+        }
+        else {
+         	  alert("Payment Done Successfully!");
+         	  return true;
+          }
+      }
+      
+      function newFunc(a) {
+          a.style.background = "#c3d7e6";
+      }
+</script>
 </head>
 <body>
 <div class="topnav">
@@ -19,33 +110,33 @@
 </div>
 <h2 align="center">BOOKLAND</h2>
 <div class="row">
-      <form action="OrderConfirmation.html" method="post">
+      <form action="OrderConfirmation.html" onsubmit="return validateForm()" method="post">
             <h3>&emsp;Payment</h3>
             <label for="fname">&emsp;Accepted Cards<br><h5><b>&emsp;&nbsp;Visa&emsp;Master Card&emsp;ICICI</b></h5></label>
               <img src="https://www.paymentsjournal.com/wp-content/uploads/2018/06/bank-3487033_1920.png" style="width: 100px;">
             
-            <label for="cname">&emsp;Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
-            <label for="ccnum">&emsp;Credit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+            <label for="cardname">&emsp;Name on Card</label>
+            <input type="text" id="name" name="cardname" placeholder="John More Doe" onblur="newFunc(this)">
+            <label for="cardnumber">&emsp;Credit card number</label>
+            <input type="text" id="number" name="cardnumber" placeholder="1111-2222-3333-4444" onblur="newFunc(this)">
             <label for="expmonth">&emsp;Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
+            <input type="text" id="month" name="expmonth" placeholder="September" onblur="newFunc(this)">
             <div class="row">
               <div class="col-50">
                 <label for="expyear">&emsp;Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2020" required>
+                <input type="text" id="year" name="expyear" placeholder="2020" onblur="newFunc(this)">
               </div>
               <div class="col-50">
                 <label for="cvv">&emsp;CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352" required>
+                <input type="text" id="cvv" name="cvv" placeholder="352" onblur="newFunc(this)">
               </div>
               <div class="col-50">
                 <label for="total">&emsp;Total Amount</label>
-                <input type="text" id="total" name="total" placeholder="&#8377;" required>
+                <input type="text" id="total" name="total" placeholder="&#8377;" onblur="newFunc(this)">
               </div>
             </div>
             <div class="col-50">
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button style="align: center;font-size: 14px; padding-left:20px; padding-right: 20px;" type="submit" value=OK>Submit</button>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button style="align: center;font-size: 14px; padding-left:20px; padding-right: 20px;" type="submit" value=OK>Submit</button>
             </div>
       </form>
    </div>

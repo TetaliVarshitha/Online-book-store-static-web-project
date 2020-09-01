@@ -4,6 +4,55 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="ShoppingCart.css">
 <title>shopping cart</title>
+<script type="text/javascript">
+function validateForm() {	
+	var price = document.getElementById("price").value;
+	var total = document.getElementById("total").value;
+	var numbers = /^[0-9]+$/;
+	
+	if(document.submit.type.selectedIndex==0 || document.submit.type1.selectedIndex==0) { 
+    	document.submit.type.focus();
+   	    alert("Please select atleat one value in drop-down!");
+    	document.submit.type1.focus();
+   	    return false;
+	}
+	
+    if(price == "") {
+    	alert("Please enter price!");
+    	return false;
+    }
+    if(!(price==450)) {
+    	alert("Please enter valid price!");
+    	return false;
+    }
+    if(!(price.match(numbers))){
+    	alert("Price should not be letters and other characters!");
+    	return false;
+    }
+
+    if(total == "") {
+    	alert("Please enter total!");
+    	return false;
+    }
+    if(total < 500 || total > 4500){
+    	alert("Please enter valid total!");
+    	return false;
+    }
+    if(!(total.match(numbers))){
+    	alert("Total should not be letters and other characters!");
+    	return false;
+    }
+    
+    else {
+   	  alert("Done Successfully!");
+   	  return true;
+    }
+}
+
+function newFunc(a) {
+  a.style.background = "#c3d7e6";
+}
+</script>
 </head>
 <body>
 <div class="topnav">
@@ -16,7 +65,7 @@
   <a href="Payment.html">PAYMENT</a>
   <a href="OrderConfirmation.html">ORDER CONFIRMATION</a>
 </div>
-<form method=post action="payment.html">
+<form name="submit" method=post action="payment.html" onsubmit="return validateForm()">
 <center><h1>BOOKLAND</h1></center><br><r>
 <center><h2>Shopping Cart</h2></center>
 <br><br><br><br><br>
@@ -24,8 +73,9 @@
 <tr>
 <td><br>Text Books:&emsp; </td>
 <td><br>
-<select >
+<select name="type" onblur="newFunc(this)">
 <optgroup label="select the book">
+<option value="">
 <option value="PPS(C)">PPS(C)
 <option value="C++">C++
 <option value="JAVA">JAVA
@@ -41,8 +91,9 @@
 <tr>
 <td><br>Quantity:&emsp; </td>
 <td><br>
-<select >
+<select name="type1" onblur="newFunc(this)">
 <optgroup label="select the quantity">
+<option value="">
 <option value="1">1
 <option value="2">2
 <option value="3">3
@@ -56,12 +107,12 @@
 <tr>
 <td><br>Price:&emsp; </td>
 <td>
-<br><input style="width: 140px;"type="text" id="p" placeholder="&#8377; 450">
+<br><input style="width: 140px;"type="text" id="price" onblur="newFunc(this)" placeholder="&#8377;" 450>
 </td></tr>
 <tr>
 <td><br>Total:&emsp; </td>
 <td>
-<br><input style="width: 140px;" type="text" id="t" placeholder="&#8377;">
+<br><input style="width: 140px;" type="text" id="total" onblur="newFunc(this)" placeholder="&#8377;">
 </td></tr> 
 <tr>
 <td></td>

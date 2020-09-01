@@ -12,7 +12,7 @@ body {
   padding: 8px;
 }
 
-form {border: 3px solid black; width: 470px; height: 715px;}
+form {border: 3px solid black; width: 470px; height: 815px;}
 form {
     margin: 430px;
     margin-top: 10px;
@@ -33,7 +33,7 @@ form {
   text-align: center;
   padding: 18px 20px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 /* Change the color of links on hover */
