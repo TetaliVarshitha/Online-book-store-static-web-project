@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user id="1">
+        <name>Varshitha</name>
+        <branch>CSE</branch>
+        <cgpa>9.0</cgpa>
+        <dateOfBirth>2000-04-09</dateOfBirth>
+        <age>20</age>
+        <mobileno>9908567525</mobileno>
+        <address>Hyderabad</address>
+    </user>
+    <user id="2">
+        <name>Vyshali</name>
+        <branch>IT</branch>
+        <cgpa>8.9</cgpa>
+        <dateOfBirth>2001-12-08</dateOfBirth>
+        <age>19</age>
+        <mobileno>9375512309</mobileno>
+        <address>Warangal</address>
+    </user>
+    <user id="3">
+        <name>Thanuja</name>
+        <branch>ECE</branch>
+        <cgpa>7.9</cgpa>
+        <dateOfBirth>2000-06-13</dateOfBirth>
+        <age>20</age>
+        <mobileno>9123400822</mobileno>
+        <address>Tanuku</address>
+    </user>
+    <user id="4">
+        <name>Sangeetha</name>
+        <branch>EEE</branch>
+        <cgpa>8.7</cgpa>
+        <dateOfBirth>1998-03-19</dateOfBirth>
+        <age>22</age>
+        <mobileno>9290154236</mobileno>
+        <address>Bangalore</address>
+    </user>
+    <user id="5">
+        <name>Manikanta</name>
+        <branch>Mechanical</branch>
+        <cgpa>9.2</cgpa>
+        <dateOfBirth>2002-01-09</dateOfBirth>
+        <age>18</age>
+        <mobileno>9900223344</mobileno>
+        <address>Hyderabad</address>
+    </user>
+    <user id="6">
+        <name>Prudhvi</name>
+        <branch>CSE</branch>
+        <cgpa>9.3</cgpa>
+        <dateOfBirth>2002-04-05</dateOfBirth>
+        <age>18</age>
+        <mobileno>7723451098</mobileno>
+        <address>Chennai</address>
+    </user>
+    <user id="7">
+        <name>Harika</name>
+        <branch>CIVIL</branch>
+        <cgpa>7.6</cgpa>
+        <dateOfBirth>2001-08-12</dateOfBirth>
+        <age>19</age>
+        <mobileno>8501802239</mobileno>
+        <address>Rajamundry</address>
+    </user>
+    <user id="8">
+        <name>Surya</name>
+        <branch>ECE</branch>
+        <cgpa>6.9</cgpa>
+        <dateOfBirth>2002-05-11</dateOfBirth>
+        <age>18</age>
+        <mobileno>9909087125</mobileno>
+        <address>Hyderabad</address>
+    </user>
+    <user id="9">
+        <name>Varun</name>
+        <branch>EEE</branch>
+        <cgpa>8.3</cgpa>
+        <dateOfBirth>2001-09-10</dateOfBirth>
+        <age>19</age>
+        <mobileno>9922134561</mobileno>
+        <address>Khammam</address>
+    </user>
+    <user id="10">
+        <name>Tharun</name>
+        <branch>Mechanical</branch>
+        <cgpa>7.2</cgpa>
+        <dateOfBirth>1999-08-29</dateOfBirth>
+        <age>21</age>
+        <mobileno>9990123525</mobileno>
+        <address>Guntur</address>
+    </user>
+</users>
