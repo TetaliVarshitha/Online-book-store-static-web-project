@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="UserProfile.css">
+<meta charset="ISO-8859-1">
+<title>userprofile</title>
+
+<script type="text/javascript">
+    function validateForm() {
+    	var username = document.getElementById("username").value;
+    	var pattern = /^[-@.\/#&+\w\s]*$/;
+    	var password = document.getElementById("pswd").value;
+    	var confirmPassword = document.getElementById("pswd-repeat").value;
+    	var mobile = document.getElementById("mobile").value;
+    	var num = /^[0-9]+$/;
+        var address = document.getElementById("address").value;
+        var option=document.getElementsByName("gender");
+
+        
+    	if(username == "") {
+        	alert("Please enter your username!");
+        	return false;
+        } 
+    	if(username.length<7 || username.length>25 || !isNaN(username) || !(username.match(pattern))){
+        	alert("Please enter valid username!");
+        	return false;
+        }
+   
+        if (password == "") {
+            alert("Please enter your password!");
+            return false;
+        }
+        if(password.length < 6) {
+        	alert("Enter the password more than 6 characters!");
+        	return false;
+        }
+        
+    	if(password != confirmPassword) {
+              alert("Password and confirmPassword does not match!");
+              return false;
+        }
+        if(confirmPassword == "") {
+          	alert("Please repeat your password!");
+          	return false;
+        }
+       
+    	if(mobile=="") {
+            alert("Please enter your mobilenumber!");
+            return false;
+        }
+        if(!(mobile.length==10)) {
+          	alert("Please enter 10-digits!");
+          	return false;
+       }
+        if(!(mobile.match(num))) {
+        	alert("Phone no. should not be letters and other characters!");
+        	return false;
+        }
+    	  
+      if(address=="") {
+            alert("Please Enter Your Details Here!");
+            return false;
+      }
+      
+      if (!(option[0].checked || option[1].checked)) {
+          alert("Please Select Your Gender");
+          return false;
+      }
+      
+      else {
+      	alert("Filled All Details Successfully!");
+      	return true;
+      }
+   }  
+  		
+  	function newFunc(b) {
+          b.style.background = "#c3d7e6";
+    }
+</script>
+
+</head>
+<body> 
+<div class="topnav">
+  <a class="active" href="BookStoreHomePage.html">&#127968;&nbsp;HOME</a>
+  <a href="Register.html">REGISTRATION</a>
+  <a href="login.html">LOGIN</a>
+  <a href="UserProfile.html">USER PROFILE</a>
+  <a href="Catalog.html">BOOKS CATALOG</a>
+  <a href="ShoppingCart.html">SHOPPING CART</a>
+  <a href="Payment.html">PAYMENT</a>
+  <a href="OrderConfirmation.html">ORDER CONFIRMATION</a>
+</div>
+<center><h1>Welcome to BOOKLAND Online Book Store </h1></center>
+<form onsubmit="return validateForm()" method="post" action="Catalog.html">
+<table align="center">
+<tr>
+<td><h4>User name:</td>
+<td><input type="text" id="username" name="uname" onblur="newFunc(this)"></td>
+</tr>
+<tr>
+<td><h4>Password:</td>
+<td><input type="password"  name="psw" id="pswd" onblur="newFunc(this)"></td>
+</tr>
+<tr>
+<td><h4>Confirm Password:</td>
+<td><input type="password" name="psw-repeat" id="pswd-repeat" onblur="newFunc(this)"></td>
+</tr>
+<tr>
+<td><h4>Mobile Number:</td>
+<td><input type="tel" id="mobile" name="mobileno" onblur="newFunc(this)"></td>
+</tr>
+<tr><td>
+<span id="gen">
+<option>
+<label for="gender"><b>Gender:</b></label>
+    <input type="radio" name="gender" id="gender" value="male" onblur="newFunc(this)">Male</input>
+    <input type="radio" name="gender" id="gender" value="female" onblur="newFunc(this)">Female</input>
+</option></span></td>
+</tr>
+<tr>
+<td><h4>Edit Address:</h4></td>
+<td><textarea name="address"rows=5 cols=15 id="address" onblur="newFunc(this)">
+</textarea>
+</td></tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br><br><br><button style="align:center; font-size: 15px;" type="submit" value="submit">Submit</button></td>
+</tr>
+
+</form>
+</body>
+</html>

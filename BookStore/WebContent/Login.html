@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<!-- <center><h1>BOOKLAND</h1></center><br> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Login.css">
+
+<script type="text/javascript">
+    function validateForm() {
+    	var email = document.getElementById("email").value;
+    	var pattern = /^[a-zA-Z0-9\-_]+(\.[a-zA-Z0-9\-_]+)*@[a-z0-9]+(\-[a-z0-9]+)*(\.[a-z0-9]+(\-[a-z0-9]+)*)*\.[a-z]{2,4}$/;
+    	var password = document.getElementById("pswd").value;
+    	 // var remember = document.getElementById("myCheck");
+    	 
+        if(email == "") {
+        	alert("Please enter your email-Id!");
+        	return false;
+        }
+        if(email.length<7 || email.length>25 || !isNaN(email) || !(email.match(pattern))){
+        	alert("Please enter valid email-Id!");
+        	return false;
+        }
+        
+    	if(password == "") {
+            alert("Please enter your password!");
+            return false;
+        }
+        if(password.length < 6) {
+         	alert("Enter the password more than 6 characters!");
+         	return false;
+        }  
+        else {
+       	  //alert("Login Done Successfully!");
+       	  return true;
+        }
+    }
+    
+    function newFunc(a) {
+        a.style.background = "#c3d7e6";
+    }
+</script>
+</head>
+<body>
+<div class="topnav">
+  <a class="active" href="BookStoreHomePage.html">&#127968;&nbsp;HOME</a>
+  <a href="Register.html">REGISTRATION</a>
+  <a href="login.html">LOGIN</a>
+  <a href="UserProfile.html">USER PROFILE</a>
+  <a href="Catalog.html">BOOKS CATALOG</a>
+  <a href="ShoppingCart.html">SHOPPING CART</a>
+  <a href="Payment.html">PAYMENT</a>
+  <a href="OrderConfirmation.html">ORDER CONFIRMATION</a>
+</div>
+<center><h1>BOOKLAND</h1></center>
+<form onsubmit="return validateForm()" action="http://localhost:8080/BookStore/ls" method="post">
+  <div class="imgcontainer">
+    <center><img src="https://www.codespeedy.com/wp-content/uploads/2018/12/avatar1.png" alt="Avatar" class="Avatar"></center>
+  </div>
+  <div class="container">
+    <label for="uname"><b>Email</b></label>
+    <br>
+    <input type="text" placeholder="Enter Email-Id" id="email" name="email" onblur="newFunc(this)">
+    <br>
+    <label for="psw"><b>Password</b></label>
+    <br>
+    <input type="password" placeholder="Enter Password" id="pswd" name="psw" onblur="newFunc(this)">
+    <br>
+    <button type="submit">Login</button><br><br>
+    <label>
+      <input type="checkbox" id="myCheck" name="test">Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#a6a6a6;">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+</body>
+</html>
+   

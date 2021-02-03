@@ -1,0 +1,35 @@
+@CHARSET "ISO-8859-1";
+body{
+background-image: url(https://i.pinimg.com/originals/69/62/29/696229717d802220de39dc1779c329a3.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no repeat;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 18px 24px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
